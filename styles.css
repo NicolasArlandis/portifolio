@@ -297,62 +297,9 @@ header nav.menu-desktop ul li{
     footer .flex{
     justify-content: space-between;
   }
-  /* Menu mobile */
-    .btn-abrir-menu{
-      color: #00ff33;
-    }
-    .menu-mobile{
-    background-color: rgba(0, 0, 0, 0.896);
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    width: 0%;
-    overflow: hidden;
-    transition: .5s;
+  .menu-mobile{
+    display: none;
   }
-  .menu-mobile.abrir-menu{
-    width: 70%; 
-  }
-  
-  .menu-mobile.abrir-menu ~ .overlay-menu{
-    display: block;
-  }
-
-    .menu-mobile nav ul{
-    text-align: right;
-  }
-  .menu-mobile nav ul li a{
-    color: white;
-    font-size: 20px;
-    font-weight: 300;
-    padding: 20px 8%;
-    list-style-type: none;
-    display: block;
-  }
-  .menu-mobile nav ul li a:hover{
-    background-color: #00ff62;
-    color: black;
-}
-menu-mobile .btn-fechar{
-  padding: 20px 8%;
-}
-.menu-mobile .btn-fechar svg{
-  color: #00ff33;
-  
-}
-.overlay-menu{
-  background-color: rgba(0, 0, 0, 0.568);
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: none;
-}
-
 
     @media screen and (max-width: 1020px){
       /* cabeçalho */
@@ -427,4 +374,60 @@ menu-mobile .btn-fechar{
         text-align: center;
 
       }
+      /* Menu mobile */
+    .btn-abrir-menu{
+      color: #00ff33;
+    }
+    .menu-mobile{
+    background-color: rgba(0, 0, 0, 0.896);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .menu-mobile.abrir-menu{
+    width: 70%; 
+  }
+  
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+  }
+
+    .menu-mobile nav ul{
+    text-align: right;
+  }
+  .menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    list-style-type: none;
+    display: block;
+  }
+  .menu-mobile nav ul li a:hover{
+    background-color: #00ff62;
+    color: black;
+}
+menu-mobile .btn-fechar{
+  padding: 20px 8%;
+}
+.menu-mobile .btn-fechar svg{
+  color: #00ff33;
+  
+}
+.overlay-menu{
+  background-color: rgba(0, 0, 0, 0.568);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
   }
