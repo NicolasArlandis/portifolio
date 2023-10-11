@@ -101,11 +101,11 @@ header a{
     transform: scale(1.4);
     transition: 0.2s;
 }   
-header nav ul{
+header nav.menu-desktop ul{
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     display: inline-block;
     padding: 0 40px;
 }
@@ -289,11 +289,142 @@ header nav ul li{
       transform: scale(1.08);
       transition: .2s;
     }
-/* Rodapé */
+  /* Rodapé */
     footer{
-      padding: 10px 4%;
-      box-shadow: 0 0 22px rgb(255, 255, 255);
-    }
+    padding: 10px 4%;
+    box-shadow: 0 0 22px rgb(255, 255, 255);
+  }
     footer .flex{
-      justify-content: space-between;
+    justify-content: space-between;
+  }
+  /* Menu mobile */
+    .btn-abrir-menu{
+      color: #00ff33;
     }
+    .menu-mobile{
+    background-color: rgba(0, 0, 0, 0.896);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+  }
+  .menu-mobile.abrir-menu{
+    width: 70%; 
+  }
+  
+  .menu-mobile.abrir-menu ~ .overlay-menu{
+    display: block;
+  }
+
+    .menu-mobile nav ul{
+    text-align: right;
+  }
+  .menu-mobile nav ul li a{
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    list-style-type: none;
+    display: block;
+  }
+  .menu-mobile nav ul li a:hover{
+    background-color: #00ff62;
+    color: black;
+}
+menu-mobile .btn-fechar{
+  padding: 20px 8%;
+}
+.menu-mobile .btn-fechar svg{
+  color: #00ff33;
+  
+}
+.overlay-menu{
+  background-color: rgba(0, 0, 0, 0.568);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  display: none;
+}
+
+
+    @media screen and (max-width: 1020px){
+      /* cabeçalho */
+      .menu-desktop{
+        display: none;
+      }
+      header .nm-contato{
+        display: none;
+      }
+      /* geral */
+      .flex{
+        flex-direction: column;
+      }
+      section.topo-do-site .flex{
+        gap: 40px;
+        margin-left: 30px;
+      }
+      .topo-do-site .flex{
+        flex-direction: column-reverse;
+      }
+      h2.titulo{
+        font-size: 30px;
+        line-height: 30px;
+      }
+      /* topo do site */
+      sectio.topo-do-site{
+        padding: 20px 4%;
+      }
+      .topo-do-site h1{
+        font-size: 32px;
+      }
+      .img-topo-site img{
+        width: 100%;
+      }
+      /* especilidades */
+      section.especialidades{
+        padding: 40px 8%;
+      }
+      /* Sobre */
+      section.sobre .flex{
+        flex-direction: column-reverse;
+      }
+      section.sobre{
+        padding: 80px 8%;
+      }
+      .sobre .txt-sobre h2{
+        font-size: 30px;
+        line-height: 35px;
+        text-align: center;
+      }
+      .nm-social{
+        text-align: center;
+      }
+      .img-sobre img{
+        width: 100%;
+      }
+      /* portifolio */
+      section.portifolio{
+        padding: 80px 8%;
+      }
+      .img-port{
+        width: auto;
+        margin:10px;
+        max-width: 360px;
+      }
+      /* rodapé */
+      footer .flex{
+        flex-direction: column;
+        gap: 30px;
+      }
+      footer .line-footer{
+        text-align: center;
+
+      }
+  }
